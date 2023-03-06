@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">AudioPlayer</string>
+    <string name="app">MUSIC APP</string>
+    <string name="Coeluso">Coeluso</string>
+    <string name="Forgot">FORGOT PASSWORD</string>
+    <string name="Sign">Sign in</string>
+    <string name="Password">Password</string>
+    <string name="Name">Username</string>
+    <string name="USERNAME">USERNAME</string>
+    <string name="PASSWORD">PASSWORD</string>
+    <string name="InDevelopment">This feature is in development. Please contact us for details: stasvitalich1994@gmail.com</string>
+    <string name="Back">Back</string>
+    <string name="Radio">Radio</string>
+    <string name="Play">Play</string>
+    <string name="Pause">Pause</string>
+    <string name="WaveDescription">Image of audio waves</string>
+    <string name="LogoImage">Logo</string>
+    <string name="Circle">Logo element</string>
+    <string name="Next">Next</string>
+    <string name="Previous">Previous</string>
+    <string name="YourMusic">Your Music</string>
+    <string name="Settings">Settings</string>
+    <string name="Exit">Exit</string>
+    <string name="AnimeRadio">Anime Radio</string>
+
+    <string name="Empty" />
+
+</resources>

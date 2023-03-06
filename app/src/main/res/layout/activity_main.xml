@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundgradient"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageBiggestCircle"
+        app:layout_constraintEnd_toEndOf="@+id/imageSecondCircle"
+        app:layout_constraintStart_toStartOf="@+id/imageSecondCircle"
+        app:layout_constraintTop_toTopOf="@+id/imageBiggestCircle">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/circleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            app:indicatorColor="@color/textMainActivityColor"
+            app:indicatorSize="225dp"
+            app:trackCornerRadius="200dp"
+            app:trackThickness="10dp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageBiggestCircle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="17dp"
+
+        android:outlineProvider="none"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/imageWaves"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/imageSecondCircle"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="60dp"
+
+
+        android:layout_marginEnd="60dp"
+        android:elevation="10dp"
+        android:outlineProvider="none"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageBiggestCircle"
+        app:layout_constraintEnd_toEndOf="@+id/imageBiggestCircle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageBiggestCircle"
+        app:layout_constraintTop_toTopOf="@+id/imageBiggestCircle"
+        app:srcCompat="@drawable/circle" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+
+        android:elevation="10dp"
+        android:thickness="4dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imageBiggestCircle"
+        app:layout_constraintEnd_toEndOf="@+id/imageSecondCircle"
+        app:layout_constraintStart_toStartOf="@+id/imageSecondCircle"
+        app:layout_constraintTop_toTopOf="@+id/imageBiggestCircle" />
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="80dp"
+
+        android:layout_marginEnd="80dp"
+        android:elevation="10dp"
+        android:outlineProvider="none"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageBiggestCircle"
+        app:layout_constraintEnd_toEndOf="@+id/imageBiggestCircle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageBiggestCircle"
+        app:layout_constraintTop_toTopOf="@+id/imageBiggestCircle"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/imageWaves"
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:layout_marginBottom="-8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/wavescopy" />
+
+    <TextView
+        android:id="@+id/textMusicApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:fontFamily="@font/montserratmedium"
+        android:letterSpacing="0.3"
+        android:text="@string/app"
+        android:textColor="@color/textMainActivityColor"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageWaves"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageWaves" />
+
+    <TextView
+        android:id="@+id/textCoeluso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserratbold"
+        android:text="@string/Coeluso"
+        android:textColor="@color/white"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toTopOf="@+id/textMusicApp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageWaves" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

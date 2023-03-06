@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundgradient"
+    tools:context=".SingInActivity">
+
+    <EditText
+        android:id="@+id/editTextPersonName"
+
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/backgroundtext"
+        android:ems="10"
+        android:fontFamily="@font/montserratmedium"
+        android:inputType="textNoSuggestions|textPersonName"
+        android:paddingLeft="20dp"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textInputPassword"
+        app:layout_constraintEnd_toEndOf="@+id/buttonSingIn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonSingIn"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        app:boxBackgroundMode="none"
+        app:boxStrokeColor="@color/Salmon"
+        app:hintTextColor="@color/Salmon"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSingIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textPasswordForInput"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/backgroundtext"
+            android:inputType="textPassword"
+            android:paddingTop="10dp"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageLine"
+        android:layout_width="50dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonForgotPassword"
+        app:layout_constraintEnd_toStartOf="@+id/buttonForgotPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonForgotPassword"
+        app:srcCompat="@drawable/backgroundtext"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageLine2"
+        android:layout_width="50dp"
+        android:layout_height="2dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonForgotPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonForgotPassword"
+        app:layout_constraintTop_toTopOf="@+id/buttonForgotPassword"
+        app:srcCompat="@drawable/backgroundtext"
+        tools:ignore="ImageContrastCheck,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="203dp"
+        android:layout_marginBottom="45dp"
+        android:elevation="20dp"
+        android:fontFamily="@font/montserratbold"
+        android:text="@string/USERNAME"
+        android:textColor="#0E2F5B"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextPersonName"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="203dp"
+        android:layout_marginBottom="45dp"
+        android:elevation="20dp"
+        android:fontFamily="@font/montserratbold"
+        android:text="@string/PASSWORD"
+        android:textColor="#0E2F5B"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputPassword"
+        app:layout_constraintEnd_toEndOf="@+id/textInputPassword"
+        app:layout_constraintStart_toStartOf="@+id/textInputPassword"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+
+    <ImageView
+        android:id="@+id/imageBiggestCircle2"
+        android:layout_width="160dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="60dp"
+        android:contentDescription="@string/Circle"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/circle2" />
+
+    <ImageView
+        android:id="@+id/imageSmallCircle3"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/Circle"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageBiggestCircle2"
+        app:layout_constraintEnd_toEndOf="@+id/imageBiggestCircle2"
+        app:layout_constraintStart_toStartOf="@+id/imageBiggestCircle2"
+        app:layout_constraintTop_toTopOf="@+id/imageBiggestCircle2"
+        app:srcCompat="@drawable/circle2" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:contentDescription="@string/LogoImage"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageSmallCircle3"
+        app:layout_constraintEnd_toEndOf="@+id/imageSmallCircle3"
+        app:layout_constraintStart_toStartOf="@+id/imageSmallCircle3"
+        app:layout_constraintTop_toTopOf="@+id/imageSmallCircle3"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/imageWaves2"
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="-8dp"
+        android:contentDescription="@string/WaveDescription"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/wavescopy" />
+
+    <Button
+        android:id="@+id/buttonSingIn"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/Salmon"
+        android:fontFamily="@font/montserratbold"
+        android:text="@string/Sign"
+        app:cornerRadius="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        android:fontFamily="@font/montserratbold"
+        android:text="@string/Forgot"
+        android:textColor="@color/TextLighter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonSingIn"
+        app:layout_constraintStart_toStartOf="@+id/buttonSingIn"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSingIn"
+        app:layout_constraintVertical_bias="0.531"
+        tools:ignore="TextContrastCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
