@@ -25,9 +25,23 @@ class MenuActivity : AppCompatActivity() {
         }
 
         binding.buttonExit.setOnClickListener {
+            val musicServiceIntent = Intent(this, MyService::class.java)
+            stopService(musicServiceIntent)
+            finish()
+            System.out.close()
+        }
+
+        binding.buttonBackMenu.setOnClickListener {
+            val intent = Intent(this,SingInActivity::class.java)
+            startActivity(intent)
             finish()
         }
 
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
         binding.buttonBackMenu.setOnClickListener {
             val intent = Intent(this, SingInActivity::class.java)
             startActivity(intent)

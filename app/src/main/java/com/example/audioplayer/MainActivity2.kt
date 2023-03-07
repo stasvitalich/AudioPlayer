@@ -7,6 +7,7 @@ import android.content.ServiceConnection
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.IBinder
+import android.view.View
 import com.example.audioplayer.databinding.ActivityMain2Binding
 
 
@@ -49,21 +50,23 @@ class MainActivity2 : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        binding.textItemPosition.visibility = View.INVISIBLE
+
         val radioList = ArrayList<RadioModel>()
         radioList.add(RadioModel(R.drawable.animeradio, "Anime"))
-        radioList.add(RadioModel(R.drawable.retrofm, "Anime"))
-        radioList.add(RadioModel(R.drawable.heartfm, "Anime"))
-        radioList.add(RadioModel(R.drawable.dorozhnoe, "Anime"))
-        radioList.add(RadioModel(R.drawable.country, "Anime"))
-        radioList.add(RadioModel(R.drawable.europaplus, "Anime"))
-        radioList.add(RadioModel(R.drawable.radiosvoboda, "Anime"))
-        radioList.add(RadioModel(R.drawable.nasheradio, "Anime"))
-        radioList.add(RadioModel(R.drawable.kpopradio, "Anime"))
-        radioList.add(RadioModel(R.drawable.echo, "Anime"))
-        radioList.add(RadioModel(R.drawable.radiodacha, "Anime"))
-        radioList.add(RadioModel(R.drawable.radioshanson, "Anime"))
-        radioList.add(RadioModel(R.drawable.classicrockradio, "Anime"))
-        radioList.add(RadioModel(R.drawable.radiomayak, "Anime"))
+        radioList.add(RadioModel(R.drawable.retrofm, "Retro"))
+        radioList.add(RadioModel(R.drawable.heartfm, "Heart"))
+        radioList.add(RadioModel(R.drawable.dorozhnoe, "Dorozhnoe"))
+        radioList.add(RadioModel(R.drawable.country, "Country"))
+        radioList.add(RadioModel(R.drawable.europaplus, "Europa"))
+        radioList.add(RadioModel(R.drawable.radiosvoboda, "Svoboda"))
+        radioList.add(RadioModel(R.drawable.nasheradio, "Nashe"))
+        radioList.add(RadioModel(R.drawable.kpopradio, "Kpop"))
+        radioList.add(RadioModel(R.drawable.echo, "Echo"))
+        radioList.add(RadioModel(R.drawable.radiodacha, "Dacha"))
+        radioList.add(RadioModel(R.drawable.radioshanson, "Shanson"))
+        radioList.add(RadioModel(R.drawable.classicrockradio, "Rock"))
+        radioList.add(RadioModel(R.drawable.radiomayak, "Mayak"))
 
         val adapter = RadioAdapter(radioList)
 
@@ -103,6 +106,7 @@ class MainActivity2 : AppCompatActivity() {
                     buttonStopCarousel.isEnabled = true
 
                 }
+                binding.textItemPosition.visibility = View.VISIBLE
             }
 
 
@@ -122,6 +126,8 @@ class MainActivity2 : AppCompatActivity() {
             }
 
             buttonStopCarousel.setOnClickListener {
+                binding.textItemPosition.visibility = View.VISIBLE
+                binding.textItemPosition.text = "The radio was stopped"
                 service?.pauseMusic()
                 buttonPlayCarousel.isEnabled = true
                 isServiceRunning = false
@@ -129,7 +135,15 @@ class MainActivity2 : AppCompatActivity() {
             }
         }
 
+        binding.buttonBackToMenu.setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
     }
+
+
 
 
 }
