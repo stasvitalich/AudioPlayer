@@ -51,6 +51,7 @@ class MainActivity2 : AppCompatActivity() {
         setContentView(view)
 
         binding.textItemPosition.visibility = View.INVISIBLE
+        binding.audioLottie.visibility = View.INVISIBLE
 
         val radioList = ArrayList<RadioModel>()
         radioList.add(RadioModel(R.drawable.animeradio, "Anime"))
@@ -107,6 +108,7 @@ class MainActivity2 : AppCompatActivity() {
 
                 }
                 binding.textItemPosition.visibility = View.VISIBLE
+                binding.audioLottie.visibility = View.VISIBLE
             }
 
 
@@ -126,6 +128,7 @@ class MainActivity2 : AppCompatActivity() {
             }
 
             buttonStopCarousel.setOnClickListener {
+                binding.audioLottie.visibility = View.INVISIBLE
                 binding.textItemPosition.visibility = View.VISIBLE
                 binding.textItemPosition.text = "The radio was stopped"
                 service?.pauseMusic()
